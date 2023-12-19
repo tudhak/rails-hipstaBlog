@@ -1,8 +1,12 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+  <div class="container-fluid px-3">
+    <div class="navbar-logo-container">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag "https://png2.cleanpng.com/sh/2bae1a49f6a315e027b16d87a4a83db2/L0KzQYm3V8A0N6l9hJH0aYP2gLBuTfJmaaNpRdN7dD3pcbTsTfxwb5CyTdQ8Yka6RLO6UsVkPWUzSaIAM0a7QYG4VcMxPmIAT6Q8MkC5Q3B3jvc=/kisspng-beard-art-face-logo-5b3b674b325c54.1053681015306197232063.png" %>
+      <% end %>
+    </div>
+
+    <h1 class="main-title">Hipsta Blog</h1>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -12,14 +16,14 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "Articles", articles_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+            <%= cl_image_tag current_user.photo.key, crop: :fill, class: "avatar", alt: "dropdown menu" %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
@@ -29,7 +33,9 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to new_user_session_path, class: "nav-link" do %>
+              <%= image_tag "guest.jpg", class: "avatar", alt: "guest picture" %>
+            <% end %>
           </li>
         <% end %>
       </ul>
