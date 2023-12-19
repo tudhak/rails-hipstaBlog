@@ -1,7 +1,25 @@
 .article-img {
-  height: 250px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
+}
+
+.article-background {
+  background-size: cover;
+  background-position: center;
+  height: 325px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-back-title {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
 }
 
 .article-container {
