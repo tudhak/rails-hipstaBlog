@@ -1,0 +1,33 @@
+.article-img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.article-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.article-delete {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.2rem;
+}
+
+.article-edit {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.2rem;
+}
+
+.article-text {
+  color: #2E2412;
+  text-decoration: none;
+}
+
+.article-content {
+  min-height: 150px;
+}
