@@ -49,3 +49,37 @@
 .article-content {
   min-height: 150px;
 }
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-form {
+  display: flex;
+}
+
+.search-field {
+  width: 250px;
+}
+
+@media(max-width: 576px) {
+  .search-container {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .search-field {
+    width: auto;
+  }
+
+  .search-form {
+    margin-bottom: 25px;
+  }
+
+  .create-button {
+    display: flex;
+    justify-content: center;
+  }
+}

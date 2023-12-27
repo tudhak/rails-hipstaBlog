@@ -3,16 +3,21 @@
   <h2 class="text-center text-primary">Browse trending hipster stories</h2>
 
     <div class="row justify-content-center mb-4">
-      <div class="col-sm-8 my-4">
-        <%= form_with url: articles_path, method: :get, class: "d-flex" do %>
+      <div class="col-sm-8 search-container">
+        <%= form_with url: articles_path, method: :get, class:"search-form me-4" do %>
           <%= text_field_tag :query,
                 params[:query],
-                class: "form-control",
+                class: "form-control search-field",
                 placeholder: "Find your next inspiration"
             %>
           <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
         <% end %>
       <!-- Ajouter un bouton à droite du formulaire pour créer un nouvel article, sous forme de modal -->
+      <div class="create-button">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createArticleModal">
+          Add an article
+        </button>
+      </div>
       </div>
     </div>
 
@@ -53,5 +58,7 @@
       <em>Sorry, no articles found.</em>
     <% end %>
   </div>
+
+ <%= render partial: "articles/form", locals: { article: @article } %>
 
 </div>
