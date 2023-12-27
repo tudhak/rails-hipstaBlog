@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 
   def index
     @article = Article.new
-    @articles = Article.all
+    @articles = Article.all.order(date: :desc)
     if params[:query].present?
       @articles = @articles.where("title ILIKE ?", "%#{params[:query]}%")
     end
@@ -20,11 +20,18 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to article_path(@article)
     else
-      render partial: "articles/form", locals: { article: @article }, status: :unprocessable_entity
+      render partial: "articles/add_form", locals: { article: @article }, status: :unprocessable_entity
+      # Find a way to display the modal instead of displaying the index page
     end
   end
 
   def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to article_path(@article)
+    else
+      render partial: "articles/edit_form", locals: { article: @article }, statusl: :unprocessable_entity
+    end
   end
 
   def destroy

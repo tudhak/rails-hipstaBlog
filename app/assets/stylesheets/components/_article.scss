@@ -32,13 +32,13 @@
   top: 20px;
   right: 20px;
   font-size: 1.2rem;
+  color: $primary;
 }
 
 .article-edit {
   position: absolute;
   top: 20px;
   left: 20px;
-  font-size: 1.2rem;
 }
 
 .article-text {
@@ -62,6 +62,11 @@
 
 .search-field {
   width: 250px;
+}
+
+.article-show-picture {
+  max-height: 450px;
+  object-fit: cover;
 }
 
 @media(max-width: 576px) {

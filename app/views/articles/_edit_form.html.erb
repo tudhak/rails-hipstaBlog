@@ -1,0 +1,36 @@
+<div class="container my-4 mx-auto">
+
+  <div class="row justify-content-center">
+
+    <div class="col-lg-4 col-sm-8">
+
+      <div class="modal fade" id="editArticleModal" tabindex="-1" aria-labelledby="editArticleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-primary" id="editArticleModalLabel">Edit your story</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <%= simple_form_for(article) do |f| %>
+                <%= f.input :title,
+                            label: false,
+                            placeholder: "Title"
+                            %>
+                <%= f.input :content,
+                            label: false,
+                            placeholder: "Content"
+                            %>
+                <%= f.input :photo, as: :file %>
+                <div class="d-flex justify-content-center">
+                <%= f.submit class:"btn btn-primary" %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

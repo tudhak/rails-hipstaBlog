@@ -12,7 +12,6 @@
             %>
           <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
         <% end %>
-      <!-- Ajouter un bouton à droite du formulaire pour créer un nouvel article, sous forme de modal -->
       <div class="create-button">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createArticleModal">
           Add an article
@@ -59,6 +58,6 @@
     <% end %>
   </div>
 
- <%= render partial: "articles/form", locals: { article: @article } %>
+ <%= render partial: "articles/add_form", locals: { article: @article } %>
 
 </div>
