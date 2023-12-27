@@ -18,8 +18,9 @@ class ArticlesController < ApplicationController
     @article.date = Date.today
     @article.rating = (1..5).to_a.sample
     if @article.save
-      redirect_to article_path(@article)
+      redirect_to article_path(@article), notice: "Article successfully created."
     else
+      flash[:alert] = "Your article could not be processed. Please review the form carefully."
       render partial: "articles/add_form", locals: { article: @article }, status: :unprocessable_entity
       # Find a way to display the modal instead of displaying the index page
     end
