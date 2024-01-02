@@ -1,5 +1,7 @@
 .message-container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: between;
 }
 
 .message-rating {
@@ -22,11 +24,33 @@
   border-color: #891C1C;
 }
 
-.vote-bar {
-  position: absolute;
-  justify-content: space-around;
+.action-bar {
+  justify-content: space-between;
   align-items: center;
-  width: 100px;
-  top: 10px;
-  right: 10px;
+  width: 125px;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}
+
+.rating-green {
+  color: #2A621B;
+}
+
+.rating-red {
+  color: #891C1C;
+}
+
+.post-delete {
+  font-size: 1.25rem;
+  color: $primary;
+}
+
+button {
+  .show-when-enabled { display: initial; }
+  .show-when-disabled { display: none; }
+
+  &[disabled] {
+  .show-when-disabled { display: initial; }
+  .show-when-enabled { display: none; }
+  }
 }
