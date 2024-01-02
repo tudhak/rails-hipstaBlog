@@ -2,24 +2,19 @@
 
     <div class="col-lg-4 col-sm-8"> %>
 
-      <div class="modal fade" id="editArticleModal" tabindex="-1" aria-labelledby="editArticleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="newMessageModal" tabindex="-1" aria-labelledby="newMessageModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5 text-primary" id="editArticleModalLabel">Edit your story</h1>
+              <h1 class="modal-title fs-5 text-primary" id="newMessageModalLabel">Post a new message</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <%= simple_form_for(article) do |f| %>
-                <%= f.input :title,
-                            label: false,
-                            placeholder: "Title"
-                            %>
+              <%= simple_form_for [article, message] do |f| %>
                 <%= f.input :content,
                             label: false,
-                            placeholder: "Content"
+                            placeholder: "Your post content"
                             %>
-                <%= f.input :photo, as: :file %>
                 <div class="d-flex justify-content-center">
                 <%= f.submit class:"btn btn-primary" %>
                 </div>

@@ -1,0 +1,32 @@
+.message-container {
+  position: relative;
+}
+
+.message-rating {
+  font-weight: bold;
+}
+
+.vote-icon {
+  border: 1px solid #888;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.vote-up {
+  color: #2A621B;
+  border-color:#2A621B;
+}
+
+.vote-down {
+  color: #891C1C;
+  border-color: #891C1C;
+}
+
+.vote-bar {
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+  top: 10px;
+  right: 10px;
+}
