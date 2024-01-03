@@ -50,19 +50,16 @@
                 <% if message.rating >= 1 %>
                   <span class="message-rating rating-green"><%= message.rating %></span>
                 <% elsif message.rating < 0 %>
-                  <span class="message-rating rating-red"><%= message.rating %></span>
+                  <span class="message-rating rating-red" data-voting-target="postRating"><%= message.rating %></span>
                 <% else message.rating.zero? %>
                   <span class="message-rating"><%= message.rating %></span>
                 <% end %>
-                <div data-voting-target="upVote" data-action="click->voting#disable">
-                  <%= link_to up_article_message_path(@article, message), data: { turbo_method: :patch }, class: "text-decoration-none" do %>
-                    <i class="fa-solid fa-thumbs-up vote-icon vote-up"></i>
-                  <% end %>
-                </div>
-                <%= button_to down_article_message_path(@article, message), data: { turbo_method: :patch, voting_target: "downVote", action: "click->voting#disable" }, class: "text-decoration-none" do %>
-                  <i class="show-when-enabled fa-solid fa-thumbs-down vote-icon vote-down"></i>
+                <%= render partial: "messages/up_vote", locals: { article: @article, message: message} %>
+                <%= render partial: "messages/down_vote", locals: { article: @article, message: message} %>
+                <!-- <%= button_to down_article_message_path(@article, message), data: { turbo_method: :patch, voting_target: "downVote", action: "click->voting#disable" }, class: "text-decoration-none" do %>
+                  <span class="show-when-enabled fa-solid fa-thumbs-down vote-icon vote-down"></span>
                   <span class="show-when-disabled">TEST</span>
-                <% end %>
+                <% end %> -->
                 <%= link_to article_message_path(@article, message), data: {turbo_method: :delete, turbo_confirm: "Do you want to delete this post?"}, class: "text-decoration-none post-delete" do %>
                 <i class="fa-solid fa-xmark"></i>
                 <% end %>

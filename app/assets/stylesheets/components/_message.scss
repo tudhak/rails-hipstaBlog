@@ -45,12 +45,24 @@
   color: $primary;
 }
 
-button {
-  .show-when-enabled { display: initial; }
-  .show-when-disabled { display: none; }
+// button {
+//   .show-when-enabled { display: initial; }
+//   .show-when-disabled {
+//     display: none;
+//     cursor: not-allowed;
+//    }
+// }
 
-  &[disabled] {
-  .show-when-disabled { display: initial; }
-  .show-when-enabled { display: none; }
-  }
+// button[disabled] {
+//   .show-when-enabled { display: none; }
+//   .show-when-disabled { display: initial; }
+// }
+
+.submit-vote {
+  border: none;
+  padding: 0;
+}
+
+.submit-vote[disabled] {
+  opacity: 0.5;
 }

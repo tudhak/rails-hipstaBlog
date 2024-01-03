@@ -23,9 +23,13 @@ class MessagesController < ApplicationController
   end
 
   def down
-    @message.rating -= 1
+    @message.rating -= (params[:message][:rating]).to_i
     @message.save
-    redirect_to article_path(@article)
+
+    respond_to do |format|
+      format.html { redirect_to article_path(@article) }
+      format.text { render partial: "messages/down_vote", locals: { article: @article, message: @message}, formats: [:html] }
+    end
   end
 
   def destroy
@@ -44,6 +48,6 @@ class MessagesController < ApplicationController
   end
 
   def message_params
-    params.require(:message).permit(:content)
+    params.require(:message).permit(:content, :rating)
   end
 end
