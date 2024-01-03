@@ -3,8 +3,8 @@
     method: :patch,
     html: {
       data: {
-      voting_target: "form",
-      action: "submit->voting#vote" }
+      voting_target: "downForm",
+      action: "submit->voting#downVote" }
       } do |f| %>
   <input type="hidden" id="message_rating" name="message[rating]" value="-1" data-voting-target="voteValue">
   <%= button_tag type: "submit", class: "submit-vote", data: { voting_target: "downVote"} do %>
