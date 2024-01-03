@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
 
   def show
     @message = Message.new
-    @messages = Message.all.order(:id)
+    @messages = Message.where(article: @article).order(:id)
   end
 
   def create
