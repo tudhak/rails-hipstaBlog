@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ["upVote", "downVote", "upForm", "downForm", "postRating", "voteValue"];
 
   connect() {
-    console.log(this.updateButtonTarget);
   }
 
   upVote(event) {

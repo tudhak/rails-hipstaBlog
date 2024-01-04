@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   resources :articles, only: %i[index show create destroy] do
+    member do
+      patch :rate
+    end
+
     resources :messages, only: %i[create destroy] do
       member do
         patch :up

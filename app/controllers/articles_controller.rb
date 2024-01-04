@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :update, :destroy]
+  before_action :set_article, only: %i[show update rate destroy]
 
   def index
     @article = Article.new
@@ -29,12 +29,16 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
     if @article.update(article_params)
       redirect_to article_path(@article)
     else
       render partial: "articles/edit_form", locals: { article: @article }, statusl: :unprocessable_entity
     end
+  end
+
+  def rate
+    raise
+    @article.update(params.require(:article).permit(:rating))
   end
 
   def destroy
