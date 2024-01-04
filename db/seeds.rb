@@ -49,7 +49,8 @@ article1 = Article.create(title: "Da goat da dee dee",
                                     Izerouaan njonab apouniek, kiommmapadaubifen isbamuofeb âmojinofoz nabhyzd !",
                           user: user1,
                           date: Date.today,
-                          rating: 4)
+                          rates: [1, 3]
+                        )
 
 article1.photo.attach(io: URI.open("https://images.unsplash.com/photo-1588466585717-f8041aec7875?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                       filename: "goat.jpg", content_type: "image/jpg")
@@ -59,7 +60,8 @@ article2 = Article.create(title: "Beanie dog yaa wawa zob",
                                     Zbaboush ayst npoobah xopala raboubouv kassoum podesh. Kastalol fagut sbouder poderash mouyekom kaboul.",
                           user: user1,
                           date: Date.today,
-                          rating: 5)
+                          rates: [2, 3, 5]
+                        )
 
 article2.photo.attach(io: URI.open("https://images.unsplash.com/photo-1517423568366-8b83523034fd?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                       filename: "dog.jpg", content_type: "image/jpg")
@@ -69,7 +71,8 @@ article3 = Article.create(title: "Faggat mamash shaavou clen",
                                   Besteder Ragouyap ! Moukalash bakesh fagoute youpok komever bodave hustamus souzelek kabbit mabbit sabbit.",
                           user: user3,
                           date: Date.today,
-                          rating: 5)
+                          rates: [4, 2, 4]
+                        )
 
 article3.photo.attach(io: URI.open("https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                       filename: "shave.jpg", content_type: "image/jpg")
@@ -79,7 +82,8 @@ article4 = Article.create(title: "Plastika gyem haadaar vog",
                                     sourgavi sleket pouqayas groudav vouksdavoush blouk fouyet plastika brof choufk koudev loft sok.",
                           user: user4,
                           date: Date.today,
-                          rating: 4)
+                          rates: [3, 3, 5, 4]
+                        )
 
 article4.photo.attach(io: URI.open("https://images.unsplash.com/photo-1598542480973-51f8456286d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                       filename: "plastika.jpg", content_type: "image/jpg")
@@ -90,7 +94,8 @@ article5 = Article.create(title: "Pouftal kyavul stoshur",
                                     Madiyak kulet !",
                           user: user2,
                           date: Date.today,
-                          rating: 3)
+                          rates: [3, 3, 5]
+                        )
 
 article5.photo.attach(io: URI.open("https://images.unsplash.com/photo-1544155815-87a399a4712b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                       filename: "shoos.jpg", content_type: "image/jpg")
@@ -100,7 +105,8 @@ article6 = Article.create(title: "Yaviid touf soukoum davish",
                                     Shadaag volsayat gonad touf paverr poumstavash hubuul babel sbit sukur hamoum !",
                           user: user2,
                           date: Date.today,
-                          rating: 4)
+                          rates: [2, 4, 3]
+                        )
 
 article6.photo.attach(io: URI.open("https://images.unsplash.com/photo-1596352670192-5a95e357df7b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                       filename: "tofu.jpg", content_type: "image/jpg")
@@ -111,7 +117,8 @@ article7 = Article.create(title: "Shbouk cremad xoyoz habaf",
                                     Hertebal poukov moyyat vilett...",
                           user: user4,
                           date: Date.today,
-                          rating: 3)
+                          rates: [2, 3, 5, 4]
+                        )
 
 article7.photo.attach(io: URI.open("https://images.unsplash.com/photo-1594178990090-ca641059a506?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                     filename: "crema.jpg", content_type: "image/jpg")
@@ -122,7 +129,8 @@ article8 = Article.create(title: "Krotta obush zvunem yazout",
                                     bruusht fustani ayoukat sader.",
                           user: user3,
                           date: Date.today,
-                          rating: 5)
+                          rates: [2, 3, 5, 3, 4]
+                        )
 
 article8.photo.attach(io: URI.open("https://images.unsplash.com/photo-1542576324495-94ce0a2091e1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                       filename: "brush.jpg", content_type: "image/jpg")
@@ -133,7 +141,8 @@ article9 = Article.create(title: "Voustr peta shouk kavaad",
                                     Moussel !",
                           user: user2,
                           date: Date.today,
-                          rating: 5)
+                          rates: [2, 3, 5]
+                        )
 
 article9.photo.attach(io: URI.open("https://images.unsplash.com/photo-1634463278803-f9f71890e67d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                       filename: "belly.jpg", content_type: "image/jpg")
@@ -144,7 +153,8 @@ article10 = Article.create(title: "Knaf houlab pyouts ruud",
                                      Nikouyer hamem badawir ?",
                            user: user2,
                            date: Date.today,
-                           rating: 2)
+                           rates: [2, 3, 5, 1]
+                          )
 
 article10.photo.attach(io: URI.open("https://images.unsplash.com/photo-1579455134319-042f718340a4?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                        filename: "gloves.jpg", content_type: "image/jpg")

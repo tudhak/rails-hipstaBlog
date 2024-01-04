@@ -20,7 +20,7 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="d-flex align-items-center">
                 <i class="fa-solid fa-star me-2" style="width: 40px;"></i>
-                <p class="card-text"><%= @article.rating %></p>
+                <p class="card-text"><%= @rating %></p>
               </div>
               <p class="card-text">Published on <%= @article.date.strftime("%d %b %Y") %></p>
             </div>
@@ -39,8 +39,8 @@
 
         <div class="d-flex mb-2 align-items-center">
           <h5 class="me-4">Rate this article</h5>
-          <%= simple_form_for @article, url: rate_article_path(@article), html: { data: { controller: "rating-submit" } } do |f| %>
-            <%= f.input :rating, collection: (1..5).to_a, label: false, input_html: { data: { controller: "star-rating", action: "click->rating-submit#submit" } } %>
+          <%= simple_form_for @article, html: { data: { controller: "rating-submit" } } do |f| %>
+            <%= f.input :rates, collection: (1..5).to_a, label: false, input_html: { data: { controller: "star-rating", action: "change->rating-submit#submit" } } %>
             <%= f.submit "Send", class:"d-none" %>
           <% end %>
         </div>

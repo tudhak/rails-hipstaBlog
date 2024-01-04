@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: %i[show update rate destroy]
+  before_action :set_article, only: %i[show update destroy]
 
   def index
     @article = Article.new
@@ -12,13 +12,14 @@ class ArticlesController < ApplicationController
   def show
     @message = Message.new
     @messages = Message.where(article: @article).order(:id)
+    @rating = (@article.rates.sum / @article.rates.length).round(1)
   end
 
   def create
     @article = Article.new(article_params)
     @article.user = current_user
     @article.date = Date.today
-    @article.rating = (1..5).to_a.sample
+    @article.rates << (1..5).to_a.sample
     if @article.save
       redirect_to article_path(@article), notice: "Article successfully created."
     else
@@ -29,16 +30,15 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    if @article.update(article_params)
+    if params[:article][:rates].present?
+      @article.rates << params[:article][:rates].to_i
+      @article.save
+      redirect_to article_path(@article)
+    elsif @article.update(article_params)
       redirect_to article_path(@article)
     else
-      render partial: "articles/edit_form", locals: { article: @article }, statusl: :unprocessable_entity
+      render partial: "articles/edit_form", locals: { article: @article }, status: :unprocessable_entity
     end
-  end
-
-  def rate
-    raise
-    @article.update(params.require(:article).permit(:rating))
   end
 
   def destroy
@@ -49,7 +49,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :content, :photo)
+    params.require(:article).permit(:title, :content, :photo, :rates)
   end
 
   def set_article
