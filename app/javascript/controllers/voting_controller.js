@@ -2,15 +2,13 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="voting"
 export default class extends Controller {
-  static targets = ["upVote", "downVote", "upForm", "downForm", "postRating", "voteValue"];
+  static targets = ["upVote", "downVote", "upForm", "downForm", "postRating", "upVoteValue", "downVoteValue"];
 
   connect() {
   }
 
   upVote(event) {
     event.preventDefault();
-    let rating = this.postRatingTarget.innerText;
-    console.log(Number(rating));
 
     fetch(this.upFormTarget.action, {
       method: "PATCH",
@@ -19,8 +17,7 @@ export default class extends Controller {
     })
       .then(response => response.text())
       .then((data) => {
-        console.log(data.message_rating)
-        this.postRatingTarget.innerText = Number(this.postRatingTarget.innerText) + Number(this.voteValueTarget.value);
+        this.postRatingTarget.innerText = Number(this.postRatingTarget.innerText) + Number(this.upVoteValueTarget.value);
         this.upVoteTarget.setAttribute("disabled", "true");
         this.downVoteTarget.setAttribute("disabled", "true");
       })
@@ -28,8 +25,6 @@ export default class extends Controller {
 
   downVote(event) {
     event.preventDefault();
-    let rating = this.postRatingTarget.innerText;
-    console.log(Number(rating));
 
     fetch(this.downFormTarget.action, {
       method: "PATCH",
@@ -38,8 +33,7 @@ export default class extends Controller {
     })
       .then(response => response.text())
       .then((data) => {
-        console.log(data.message_rating)
-        this.postRatingTarget.innerText = Number(this.postRatingTarget.innerText) + Number(this.voteValueTarget.value);
+        this.postRatingTarget.innerText = Number(this.postRatingTarget.innerText) + Number(this.downVoteValueTarget.value);
         this.upVoteTarget.setAttribute("disabled", "true");
         this.downVoteTarget.setAttribute("disabled", "true");
       })

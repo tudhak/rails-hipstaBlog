@@ -16,19 +16,22 @@ class MessagesController < ApplicationController
   end
 
   def up
-    # raise
-    @message.rating += 1
-    @message.save
-    redirect_to article_path(@article)
-  end
-
-  def down
-    @message.rating -= (params[:message][:rating]).to_i
+    @message.rating += (params[:message][:rating]).to_i
     @message.save
 
     respond_to do |format|
       format.html { redirect_to article_path(@article) }
-      format.text { render partial: "messages/down_vote", locals: { article: @article, message: @message}, formats: [:html] }
+      format.text { render partial: "messages/up_vote", locals: { article: @article, message: @message }, formats: [:html] }
+    end
+  end
+
+  def down
+    @message.rating += (params[:message][:rating]).to_i
+    @message.save
+
+    respond_to do |format|
+      format.html { redirect_to article_path(@article) }
+      format.text { render partial: "messages/down_vote", locals: { article: @article, message: @message }, formats: [:html] }
     end
   end
 

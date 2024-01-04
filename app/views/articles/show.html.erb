@@ -56,11 +56,11 @@
             <div class="message-container" data-controller="voting">
               <div class="d-flex action-bar">
                 <% if message.rating >= 1 %>
-                  <span class="message-rating rating-green"><%= message.rating %></span>
+                  <span class="message-rating rating-green" data-voting-target="postRating"><%= message.rating %></span>
                 <% elsif message.rating < 0 %>
                   <span class="message-rating rating-red" data-voting-target="postRating"><%= message.rating %></span>
                 <% else message.rating.zero? %>
-                  <span class="message-rating"><%= message.rating %></span>
+                  <span class="message-rating" data-voting-target="postRating"><%= message.rating %></span>
                 <% end %>
                 <%= render partial: "messages/up_vote", locals: { article: @article, message: message} %>
                 <%= render partial: "messages/down_vote", locals: { article: @article, message: message} %>

@@ -6,7 +6,7 @@
       voting_target: "downForm",
       action: "submit->voting#downVote" }
       } do |f| %>
-  <input type="hidden" id="message_rating" name="message[rating]" value="-1" data-voting-target="voteValue">
+  <input type="hidden" id="message_rating" name="message[rating]" value="-1" data-voting-target="downVoteValue">
   <%= button_tag type: "submit", class: "submit-vote", data: { voting_target: "downVote"} do %>
     <i class="fa-solid fa-thumbs-down vote-icon vote-down"></i>
   <% end %>
