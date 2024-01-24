@@ -17,9 +17,7 @@ class ArticlesController < ApplicationController
     @average_rating = article_rates.empty? ? "Article not rated yet" : (article_rates.sum / article_rates.length).round(1)
     @has_user_rated = Review.where(user: current_user, article: @article).length >= 1
     @user_rating = Review.find_by(user: current_user, article: @article).rating unless Review.find_by(user: current_user, article: @article).nil?
-    @message_rating = Vote.pluck(:rating).sum
     @vote = Vote.new
-    # @has_user_voted = Vote.find_by(user: current_user, message: Message.find(params[:message_id])).empty?
   end
 
   def create
@@ -36,10 +34,6 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    # if params[:article][:rates].present?
-    #   @article.rates << params[:article][:rates].to_i
-    #   @article.save
-    #   redirect_to article_path(@article)
     if @article.update(article_params)
       redirect_to article_path(@article)
     else

@@ -12,5 +12,4 @@ class VotesController < ApplicationController
       render "articles/show", status: :unprocessable_entity
     end
   end
-
 end

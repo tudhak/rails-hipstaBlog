@@ -11,10 +11,6 @@ Rails.application.routes.draw do
     resources :reviews, only: %i[create]
     resources :messages, only: %i[create destroy] do
       resources :votes, only: %i[create]
-      # member do
-      #   patch :up
-      #   patch :down # post with button_to
-      # end
     end
   end
 

@@ -14,26 +14,6 @@ class MessagesController < ApplicationController
     end
   end
 
-  # def up
-  #   @message.rating += (params[:message][:rating]).to_i
-  #   @message.save
-
-  #   respond_to do |format|
-  #     format.html { redirect_to article_path(@article) }
-  #     format.text { render partial: "messages/up_vote", locals: { article: @article, message: @message }, formats: [:html] }
-  #   end
-  # end
-
-  # def down
-  #   @message.rating += (params[:message][:rating]).to_i
-  #   @message.save
-
-  #   respond_to do |format|
-  #     format.html { redirect_to article_path(@article) }
-  #     format.text { render partial: "messages/down_vote", locals: { article: @article, message: @message }, formats: [:html] }
-  #   end
-  # end
-
   def destroy
     @message.destroy
     redirect_to article_path(@article), status: :see_other

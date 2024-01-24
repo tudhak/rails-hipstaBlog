@@ -4,18 +4,3 @@
     <i class="fa-solid fa-thumbs-down vote-icon vote-down"></i>
   <% end %>
 <% end %>
-
-<%# simple_form_for [message, vote],
-    url: down_article_message_path(article, message),
-    method: :patch,
-    html: {
-      data: {
-      voting_target: "downForm",
-      action: "submit->voting#downVote" }
-    #   }
-    do |f| %>
-  <!-- <input type="hidden" id="message_rating" name="vote[rating]" value="-1"> -->
-  <%#= button_tag type: "submit", class: "submit-vote", data: { voting_target: "downVote" } do %>
-    <!-- <i class="fa-solid fa-thumbs-down vote-icon vote-down"></i> -->
-  <%# end %>
-<%# end %>
