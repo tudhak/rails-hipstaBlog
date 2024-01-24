@@ -12,7 +12,10 @@ class ArticlesController < ApplicationController
   def show
     @message = Message.new
     @messages = Message.where(article: @article).order(:id)
-    @rating = (@article.rates.sum / @article.rates.length).round(1)
+    @review = Review.new
+    article_rates = Review.where(article: @article).pluck(:rating)
+    @average_rating = article_rates.empty? ? "Article not rated yet" : (article_rates.sum / article_rates.length).round(1)
+    @has_user_rated = Review.where(user: current_user, article: @article).length >= 1
   end
 
   def create

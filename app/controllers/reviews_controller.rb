@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.article = @article
     @review.user = current_user
-    if @review.save(review_params)
+    if @review.save
       redirect_to article_path(@article)
     else
       render "articles/show", status: :unprocessable_entity
@@ -14,6 +14,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:article).permit(:rating)
+    params.require(:review).permit(:rating)
   end
 end
