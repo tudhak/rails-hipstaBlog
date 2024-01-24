@@ -10,10 +10,11 @@ Rails.application.routes.draw do
   resources :articles, only: %i[index show create update destroy] do
     resources :reviews, only: %i[create]
     resources :messages, only: %i[create destroy] do
-      member do
-        patch :up
-        patch :down # post with button_to
-      end
+      resources :votes, only: %i[create]
+      # member do
+      #   patch :up
+      #   patch :down # post with button_to
+      # end
     end
   end
 

@@ -48,8 +48,7 @@ article1 = Article.create(title: "Da goat da dee dee",
                           content: "Uryta ppowof sabbh ipuur. Bhaasappas, mayan fakedem, ozob ? Ifoby uurbam mnofoi klopozite.
                                     Izerouaan njonab apouniek, kiommmapadaubifen isbamuofeb âmojinofoz nabhyzd !",
                           user: user1,
-                          date: Date.today,
-                          rates: [1, 3]
+                          date: Date.today
                         )
 
 article1.photo.attach(io: URI.open("https://images.unsplash.com/photo-1588466585717-f8041aec7875?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
@@ -59,8 +58,7 @@ article2 = Article.create(title: "Beanie dog yaa wawa zob",
                           content: "Maaadesh dog awazba zboub aoda apijo pomsnbeuab, uaiy paozdbui maizydv ! Puabsyn, anbudvyz paopapom.
                                     Zbaboush ayst npoobah xopala raboubouv kassoum podesh. Kastalol fagut sbouder poderash mouyekom kaboul.",
                           user: user1,
-                          date: Date.today,
-                          rates: [2, 3, 5]
+                          date: Date.today
                         )
 
 article2.photo.attach(io: URI.open("https://images.unsplash.com/photo-1517423568366-8b83523034fd?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
@@ -70,8 +68,7 @@ article3 = Article.create(title: "Faggat mamash shaavou clen",
                           content: "Despeyrom gaglagalou boounavash poyeb derop moufout vadamesh bonobom zbebem yapouv ganour stomaval.
                                   Besteder Ragouyap ! Moukalash bakesh fagoute youpok komever bodave hustamus souzelek kabbit mabbit sabbit.",
                           user: user3,
-                          date: Date.today,
-                          rates: [4, 2, 4]
+                          date: Date.today
                         )
 
 article3.photo.attach(io: URI.open("https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
@@ -81,8 +78,7 @@ article4 = Article.create(title: "Plastika gyem haadaar vog",
                           content: "Fougash habeder moukouvak jadopem iadovork proudem ikouts vashim bavnavan soukanay yavots boush,
                                     sourgavi sleket pouqayas groudav vouksdavoush blouk fouyet plastika brof choufk koudev loft sok.",
                           user: user4,
-                          date: Date.today,
-                          rates: [3, 3, 5, 4]
+                          date: Date.today
                         )
 
 article4.photo.attach(io: URI.open("https://images.unsplash.com/photo-1598542480973-51f8456286d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
@@ -93,8 +89,7 @@ article5 = Article.create(title: "Pouftal kyavul stoshur",
                                     Oztacem flakkets kipouf broshdag galayer faguetik poumalouf youbem stuf, elakouere saffuut.
                                     Madiyak kulet !",
                           user: user2,
-                          date: Date.today,
-                          rates: [3, 3, 5]
+                          date: Date.today
                         )
 
 article5.photo.attach(io: URI.open("https://images.unsplash.com/photo-1544155815-87a399a4712b?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
@@ -104,8 +99,7 @@ article6 = Article.create(title: "Yaviid touf soukoum davish",
                           content: "Zbadesh staprut fuksam xeleb beleyogan kutsum stabedek eflekat pomstouk kun. Heyelev !
                                     Shadaag volsayat gonad touf paverr poumstavash hubuul babel sbit sukur hamoum !",
                           user: user2,
-                          date: Date.today,
-                          rates: [2, 4, 3]
+                          date: Date.today
                         )
 
 article6.photo.attach(io: URI.open("https://images.unsplash.com/photo-1596352670192-5a95e357df7b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
@@ -116,8 +110,7 @@ article7 = Article.create(title: "Shbouk cremad xoyoz habaf",
                                     Shoufem makyouval poyots rouvdolik ukalat bayouve pudran gouvni lokakout voundashyk.
                                     Hertebal poukov moyyat vilett...",
                           user: user4,
-                          date: Date.today,
-                          rates: [2, 3, 5, 4]
+                          date: Date.today
                         )
 
 article7.photo.attach(io: URI.open("https://images.unsplash.com/photo-1594178990090-ca641059a506?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
@@ -128,8 +121,7 @@ article8 = Article.create(title: "Krotta obush zvunem yazout",
                                     Hufut zulkudam xoutaprov shoukadan besteyev prust, ouglich zatafouf poulest
                                     bruusht fustani ayoukat sader.",
                           user: user3,
-                          date: Date.today,
-                          rates: [2, 3, 5, 3, 4]
+                          date: Date.today
                         )
 
 article8.photo.attach(io: URI.open("https://images.unsplash.com/photo-1542576324495-94ce0a2091e1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
@@ -140,8 +132,7 @@ article9 = Article.create(title: "Voustr peta shouk kavaad",
                                     Bradoum pougaraf sbed vulagg oft bure, nugget frigous haribut shtadaf lefek, nunavut.
                                     Moussel !",
                           user: user2,
-                          date: Date.today,
-                          rates: [2, 3, 5]
+                          date: Date.today
                         )
 
 article9.photo.attach(io: URI.open("https://images.unsplash.com/photo-1634463278803-f9f71890e67d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
@@ -152,8 +143,7 @@ article10 = Article.create(title: "Knaf houlab pyouts ruud",
                                      Kaloust kakawet teglagouche shoudab prunasse ustarak zdouyem prots.
                                      Nikouyer hamem badawir ?",
                            user: user2,
-                           date: Date.today,
-                           rates: [2, 3, 5, 1]
+                           date: Date.today
                           )
 
 article10.photo.attach(io: URI.open("https://images.unsplash.com/photo-1579455134319-042f718340a4?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
