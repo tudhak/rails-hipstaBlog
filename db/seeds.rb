@@ -26,15 +26,15 @@ user1 = User.create(first_name: "Joachim", last_name: "LeJaune", email: "jlejaun
 user1.photo.attach(io: URI.open("https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
                       filename: "user1.jpg", content_type: "image/jpg")
 
-user2 = User.create(first_name: "Grace", last_name: "DeFat", email: "gdfo@live.com", password: "abc456")
+user2 = User.create(first_name: "Grace", last_name: "DeGrust", email: "gdeg@live.com", password: "abc456")
 user2.photo.attach(io: URI.open("https://images.pexels.com/photos/10189405/pexels-photo-10189405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
                       filename: "user2.jpg", content_type: "image/jpg")
 
-user3 = User.create(first_name: "Joyce", last_name: "Van Queef", email: "jqueenie@gmail.com", password: "abc789")
+user3 = User.create(first_name: "Joyce", last_name: "Van Leek", email: "jqueenie@gmail.com", password: "abc789")
 user3.photo.attach(io: URI.open("https://images.pexels.com/photos/3646160/pexels-photo-3646160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
                       filename: "user3.jpg", content_type: "image/jpg")
 
-user4 = User.create(first_name: "Otto", last_name: "Fuhlenberg", email: "Ottoful@aol.com", password: "def123")
+user4 = User.create(first_name: "Otto", last_name: "Fuhlenberg", email: "ottoful@aol.com", password: "def123")
 user4.photo.attach(io: URI.open("https://images.pexels.com/photos/634021/pexels-photo-634021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
                       filename: "user4.jpg", content_type: "image/jpg")
 
@@ -54,9 +54,9 @@ article1 = Article.create(title: "Da goat da dee dee",
 article1.photo.attach(io: URI.open("https://images.unsplash.com/photo-1588466585717-f8041aec7875?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                       filename: "goat.jpg", content_type: "image/jpg")
 
-article2 = Article.create(title: "Beanie dog yaa wawa zob",
-                          content: "Maaadesh dog awazba zboub aoda apijo pomsnbeuab, uaiy paozdbui maizydv ! Puabsyn, anbudvyz paopapom.
-                                    Zbaboush ayst npoobah xopala raboubouv kassoum podesh. Kastalol fagut sbouder poderash mouyekom kaboul.",
+article2 = Article.create(title: "Beanie dog yaa wawa zvouf",
+                          content: "Maaadesh dog awazba zoudem aoda apijo pomsnbeuab, uaiy paozdbui maizydv ! Puabsyn, anbudvyz paopapom.
+                                    Zbaboush ayst npoobah xopala raboubouv kassoum podesh. Kastalol fagrut sbouder poderash mouyekom kaboul.",
                           user: user1,
                           date: Date.today
                         )
@@ -64,9 +64,9 @@ article2 = Article.create(title: "Beanie dog yaa wawa zob",
 article2.photo.attach(io: URI.open("https://images.unsplash.com/photo-1517423568366-8b83523034fd?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                       filename: "dog.jpg", content_type: "image/jpg")
 
-article3 = Article.create(title: "Faggat mamash shaavou clen",
+article3 = Article.create(title: "Fajaal mamash shaavou clen",
                           content: "Despeyrom gaglagalou boounavash poyeb derop moufout vadamesh bonobom zbebem yapouv ganour stomaval.
-                                  Besteder Ragouyap ! Moukalash bakesh fagoute youpok komever bodave hustamus souzelek kabbit mabbit sabbit.",
+                                  Besteder Ragouyap ! Moukalash bakesh fagoute youpok komever bodave hustamus souzelek kabbit maggar saddem.",
                           user: user3,
                           date: Date.today
                         )
@@ -116,8 +116,8 @@ article7 = Article.create(title: "Shbouk cremad xoyoz habaf",
 article7.photo.attach(io: URI.open("https://images.unsplash.com/photo-1594178990090-ca641059a506?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                     filename: "crema.jpg", content_type: "image/jpg")
 
-article8 = Article.create(title: "Krotta obush zvunem yazout",
-                          content: "Budek ablouf ? Shaadav moustav butus anoushka fatil proutshek zdafouf, yallaf.
+article8 = Article.create(title: "Youstel obush zvunem yazout",
+                          content: "Budek ablouf ? Shaadav moustav butus aloukam fatil proutshek zdafouf, yallaf.
                                     Hufut zulkudam xoutaprov shoukadan besteyev prust, ouglich zatafouf poulest
                                     bruusht fustani ayoukat sader.",
                           user: user3,
@@ -127,9 +127,9 @@ article8 = Article.create(title: "Krotta obush zvunem yazout",
 article8.photo.attach(io: URI.open("https://images.unsplash.com/photo-1542576324495-94ce0a2091e1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                       filename: "brush.jpg", content_type: "image/jpg")
 
-article9 = Article.create(title: "Voustr peta shouk kavaad",
-                          content: "Estoulef galaz tayavut katsu founette hebadij saucisse kluf, yamate agandi fute.
-                                    Bradoum pougaraf sbed vulagg oft bure, nugget frigous haribut shtadaf lefek, nunavut.
+article9 = Article.create(title: "Voustr zoup shouk kavaad",
+                          content: "Estoulef galaz tayavut katsu foulej hebadij soggut kluf, yamate agandi fute.
+                                    Bradoum pougaraf sbed vulagg oft bure, nugvet frigous haribut shtadaf lefek, nunavut.
                                     Moussel !",
                           user: user2,
                           date: Date.today
